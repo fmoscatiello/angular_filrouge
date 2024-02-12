@@ -1,0 +1,12 @@
+
+<section class="d-flex dlex-row flex-wrap">
+@for (categorie of categories; track categorie) {
+<div class="card border-primary m-2" style="width: 30rem;">
+    <div class="card-header d-flex justify-content-center"><app-categorie [categorie]="categorie"></app-categorie></div>
+    <div class="card-body">
+        <!-- <h4 class="card-title"><app-categorie [categorie]="categorie"></app-categorie></h4> -->
+        <p class="card-text"><app-theme-list [categorie_id]="categorie.id"></app-theme-list></p>
+    </div>
+</div>
+}
+</section>

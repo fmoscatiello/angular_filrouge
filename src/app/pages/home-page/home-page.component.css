@@ -1,0 +1,8 @@
+
+.best-card-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: rgb(242, 242, 242);
+}

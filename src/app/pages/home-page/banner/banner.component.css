@@ -1,0 +1,51 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    font-size: 20px;
+    z-index: 1;
+    top: 48%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.banner-image {
+    filter: brightness(60%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-bar-container {
+    position: absolute;
+    top: 60%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    font-size: 16px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 25px;
+    transform: translateY(-50%);
+    color: black;
+}

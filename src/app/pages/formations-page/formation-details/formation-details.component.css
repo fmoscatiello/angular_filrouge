@@ -1,0 +1,16 @@
+.details {
+    margin-top: 20vh;
+}
+
+.card-details {
+    width: 40%;
+    float: right;
+
+}
+
+.headerFormation {
+    height: 10em;
+    background: rgb(41, 19, 186);
+    background: linear-gradient(90deg, rgba(41, 19, 186, 1) 0%, rgba(194, 57, 152, 1) 100%);
+    ;
+}

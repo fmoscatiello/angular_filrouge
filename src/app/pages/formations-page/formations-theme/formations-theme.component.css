@@ -1,0 +1,21 @@
+.liste-sessions {
+    height: 100vh;
+    margin-top: 7rem;
+}
+
+.container {
+    width: 70%;
+    background: rgb(41, 19, 186);
+    background: linear-gradient(90deg, rgba(41, 19, 186, 1) 0%, rgba(194, 57, 152, 1) 100%);
+}
+
+.card {
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    color: white
+}
+
+a {
+    text-decoration: none;
+}

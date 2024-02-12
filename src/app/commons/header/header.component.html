@@ -1,0 +1,69 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <div class="logo-container">
+        <img class="logo" src="../../../assets/images/IT-Training.png" alt="logo" />
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarColor04"
+        aria-controls="navbarColor04"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor04">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"
+              >Accueil
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="formations">Formations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Financement</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="fa-regular fa-envelope"></i>Nous contacter</a
+            >
+          </li>
+        </ul>
+        <div class="customer-zone">
+          <a class="customer-zone-link"
+            ><i class="fas fa-user"></i>Espace client</a
+          >
+          <div class="dropdown">
+            <div class="dropdown-item">
+              <label for="username">Identifiez-vous:</label>
+              <input type="text" id="username" name="username" />
+            </div>
+            <div class="dropdown-item">
+              <label for="password">Mot de passe:</label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <div class="connect-area">
+              <button class="btn btn-connect">Connecter</button>
+              <a>Mot de passe oublié</a>
+              <a routerLink ="creation-compte">Créer un compte</a>
+            </div>
+          </div>
+        </div>
+        <form class="d-flex search-bar">
+          <input
+            class="form-control me-sm-2"
+            type="search"
+            placeholder="Mots clés..."
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>

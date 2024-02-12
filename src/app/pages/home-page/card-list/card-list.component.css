@@ -1,0 +1,24 @@
+.list {
+    height: 100vh;
+}
+
+.best-card-list, .finance-card-list {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.carousel {
+    margin: 0 5rem;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    background: black;
+    width: 6%;
+    opacity: 0.08;
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    opacity: 0.2;
+}
