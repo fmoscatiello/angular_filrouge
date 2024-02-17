@@ -1,7 +1,101 @@
-.form-container {
-    margin: 5rem 0;
+a {
+    color: black;
+    text-decoration: none;
 }
 
-.btn {
+.idPage{
+    height: 100vh;
+}
+
+.banner {
+    background: rgb(41,19,186);
+    background: linear-gradient(90deg, rgba(41,19,186,1) 0%, rgba(194,57,152,1) 100%);
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    background-position: 100% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.connection-wrap {
+    margin-top: -250px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.choice-container{
+    display: flex;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 20%;
+    height: 45px;
+}
+
+.choice-container a {
+    display: flex;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
     width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice-container a.active {
+    color: black;
+    background-color: white;
+}
+
+
+
+form {
+    width: 80%;
+    padding: 1.5rem;
+}
+
+.form-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+    width: 40%;
+}
+
+.form-label {
+    font-weight: 500;
+}
+.btn-connect {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.btn-connect:hover {
+    background-color: white;
+    color: black;
+}
+
+.radio-form label {
+    margin-right: 15px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.separation {
+    height: 100vh;
+    margin: auto;
 }

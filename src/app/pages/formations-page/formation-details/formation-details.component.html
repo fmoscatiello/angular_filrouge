@@ -2,63 +2,81 @@
     <div class="details">
         <div class="headerFormation">
             <div class="row">
-                <h1 class="text-white text-center mt-5">Formation - Agile</h1>
+                <h1 class="text-white text-center mt-5">{{formation.nom}}</h1>
             </div>
         </div>
-        <div class="accordeon">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Informations sur la formation
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            La reconnaissance de la compétence projet au travers d'une certification internationale est
-                            un atout dans la carrière d'un chef de projet. Cette formation permet de se préparer et de
-                            passer la certification PMP® du PMI® (Project Management Institute).
-
-                            Les candidats qui veulent s'inscrire à l'examen doivent satisfaire aux exigences de
-                            qualification et d'expérience définies par le PMI®. Ces exigences sont consultables en ligne
-                            sur le site du : PMI®.
-
-                            Attention : Le passage de l'examen PMP® ne peut se faire qu'une fois l'éligibilité obtenue
-                            auprès du PMI®.
-
-                            PMI, PMBOK, PMP, PgMP, PMI-SP, PMI-RMP et le logo PMI Accredited Training Provider sont des
-                            marques déposées du Project Management Institute, Inc.
-                            <code>.accordion-body</code>, though the transition does limit overflow.
+        <div class="container row mt-3">
+            <div class="col-8">
+                <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="dark">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="navbarColor02">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:4200/formations/sousthemes/formation-details/{{formation.id}}#objectif">Objectif de la formation
+                                        <span class="visually-hidden">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:4200/formations/sousthemes/formation-details/{{formation.id}}#modalite">Modalités, methodes et moyens
+                                        pédagogiques</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:4200/formations/sousthemes/formation-details/{{formation.id}}#prerequis">prérequis</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="http://localhost:4200/formations/sousthemes/formation-details/{{formation.id}}#programme">Programme détaillé</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <aside class="card-details">
-        <div class="card text-center">
-            <div class="card-header">
-                <ul class="nav nav-pills card-header-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
+                </nav>
+                <h5 class="text-center mt-5" id="objectif">Objectif de la formation</h5>
+                <h5 class="mt-5">A l'issue de cette formation, vous serez capable de :</h5>
+                <ul class="mt-3">
+                    <li>Utiliser le vocabulaire et les concepts de base en gestion de projets</li>
+                    <li>Planifier les étapes d'un projet</li>
+                    <li>Suivre l'exécution des travaux</li>
+                    <li>Evaluer les risque</li>
+                    <li>Manager et communiquer dans le projet.</li>
+                </ul>
+                <h5 id="modalite" class="mt-5">Modalités, méthodes et moyens pédagogiques</h5>
+                <p class="mt-3">
+                    Formation délivrée en présentiel ou distanciel* (blended-learning, e-learning, classe virtuelle,
+                    présentiel à distance).
+                    Le formateur alterne entre méthode** démonstrative, interrogative et active (via des travaux
+                    pratiques et/ou des mises en situation).
+                    Variables suivant les formations, les moyens pédagogiques mis en oeuvre sont :
+                </p>
+                <ul class="mt-3">
+                    <li>Ordinateurs Mac ou PC (sauf pour certains cours de l'offre Management), connexion internet
+                        fibre, tableau blanc ou paperboard, vidéoprojecteur ou écran tactile interactif (pour le
+                        distanciel)</li>
+                    <li>Environnements de formation installés sur les postes de travail ou en ligne</li>
+                    <li>Supports de cours et exercices</li>
+                </ul>
+                <p class="mt-3">
+                    En cas de formation intra sur site externe à ItTraining, le client s'assure et s'engage
+                    également à
+                    avoir toutes les ressources matérielles pédagogiques nécessaires (équipements informatiques...)
+                    au
+                    bon déroulement de l'action de formation visée conformément aux prérequis indiqués dans le
+                    programme
+                    de formation communiqué.
+                </p>
+                <h5 id="prerequis" class="mt-5">Prérequis</h5>
+                <p class="mt-3">Aucun</p>
+                <h5 class="mt-5" id="programme">Programme</h5>
+                <h4 class="mt-3">Jour 1</h4>
+                <ul class="mt-3">
+                    <li>Qu'est-ce qu'un projet ?</li>
+                    <li>Notion de valeur et de création de valeur</li>
+                    <li>Importance du management de projets</li>
+                    <li>Relations</li>
+                    <li>Rôle du chef de projets</li>
+                    <li>Etre un gestionnaire diligent, respectueux et attentif</li>
+                    <li>Se concentrer sur la valeur</li>
                 </ul>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
         </div>
-    </aside>
-    <div class="row">
-
     </div>
 </section>

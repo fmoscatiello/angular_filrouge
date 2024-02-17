@@ -1,0 +1,18 @@
+@for (soustheme of sousthemes; track soustheme) {
+<section class="accordion py-3" id="accordionExample-{{soustheme.id}}">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{soustheme.id}}">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + soustheme.id"
+                aria-expanded="true" attr.aria-controls="collapse{{soustheme.id}}">
+                <app-soustheme [sousTheme]="soustheme"></app-soustheme>
+            </button>
+        </h2>
+        <div id="collapse{{soustheme.id}}" class="accordion-collapse collapse show" attr.aria-labelledby="heading{{soustheme.id}}"
+            attr.data-bs-parent="#accordionExample-{{soustheme.id}}">
+            <div class="accordion-body">
+                <app-formation-list [soustheme_id]="soustheme.id"></app-formation-list>
+            </div>         
+        </div>
+    </div>
+</section>
+}

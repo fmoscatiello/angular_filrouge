@@ -1,5 +1,5 @@
 .details {
-    margin-top: 20vh;
+    /* margin-top: 5vh; */
 }
 
 .card-details {
@@ -13,4 +13,20 @@
     background: rgb(41, 19, 186);
     background: linear-gradient(90deg, rgba(41, 19, 186, 1) 0%, rgba(194, 57, 152, 1) 100%);
     ;
+}
+
+ul {
+    /* list-style: none; */
+}
+
+.aside {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 140vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

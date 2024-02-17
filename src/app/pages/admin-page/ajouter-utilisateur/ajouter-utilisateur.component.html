@@ -1,0 +1,55 @@
+<div class="idPage">
+    <div class="banner"></div>
+    <div class="connection-wrap">
+      <div class="form-container">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+
+          <div class="form-outline mb-3 radio-form">
+            <label class="form-label">
+              Civilite
+            </label>
+            <input type="radio" formControlName="civilite" value="MONSIEUR"> M
+            <input type="radio" formControlName="civilite" value="MADAME"> MME
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="role">Role:</label>
+            <select class="form-control" id="role" name="role" formControlName="role">
+              <option value="ADMIN">ADMIN</option>
+              <option value="UTILISATEUR">UTILISATEUR</option>
+              <option value="FORMATEUR">FORMATEUR</option>
+            </select>
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="prenom">Prenom:</label>
+            <input class="form-control" type="text" id="prenom" name="prenom" formControlName="prenom" />
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="nom">Nom:</label>
+            <input class="form-control" type="text" id="nom" name="nom" formControlName="nom" />
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-control" type="text" id="email" name="email" formControlName="email" />
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="telephone">Telephone:</label>
+            <input class="form-control" type="text" id="telephone" name="telephone" formControlName="telephone" />
+          </div>
+  
+          <div class="form-outline mb-4">
+            <label class="form-label" for="password">Mot de passe:</label>
+            <input class="form-control" type="password" id="password" name="password" formControlName="password" />
+          </div>
+  
+          <button type="submit" class="btn btn-connect mb-4">Creer un compte</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="separation"></div>

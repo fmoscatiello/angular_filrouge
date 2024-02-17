@@ -1,0 +1,18 @@
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 2rem;
+}
+
+.delete-btn {
+    display: flex;
+    align-items: center;
+}
+
+.retour-btn {
+    display: flex;
+    align-items: center;
+}

@@ -60,6 +60,10 @@ a {
     position: relative;
 }
 
+.customer-zone-link:hover {
+    cursor: pointer;
+}
+
 .connect-area {
     display: flex;
     flex-direction: column;
@@ -86,11 +90,10 @@ a {
     color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    display: none;
 }
 
-.customer-zone:hover .dropdown {
-    display: block;
+.form-hidden {
+    display: none;
 }
 
 .dropdown-item {

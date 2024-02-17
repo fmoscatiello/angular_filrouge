@@ -1,0 +1,36 @@
+<div class="idPage">
+    <div class="banner"></div>
+    <div class="connection-wrap">
+        <div class="choice-container">
+            <a class="active">Se connecter</a>
+            <a routerLink="creation-compte">S'enregistrer</a>
+        </div>
+        <div class="form-container">
+            <form [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="email">Email:</label>
+                    <input class="form-control" type="text" id="email" name="email" formControlName="email" />
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Mot de passe:</label>
+                    <input class="form-control" type="password" id="password" name="password"
+                        formControlName="password" />
+                </div>
+
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4">
+                    <div class="col">
+                        <a href="#!">Mot de passe oublié?</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-connect mb-4">Se connecter</button>
+
+                <div class="text-center">
+                    <p>Pas encore membre ? <a routerLink="/identification/creation-compte">S'enregistrer</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="separation"></div>

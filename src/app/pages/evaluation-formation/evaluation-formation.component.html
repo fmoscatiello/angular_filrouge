@@ -1,0 +1,42 @@
+<section class="vh-100 bg-image evalForm mt-5">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-12 col-xl-12">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Commenter, noter la formation</h2>
+                            <form [formGroup]="evalForm" (ngSubmit)="onSubmit()">
+                                <div class="container">
+                                    <input type="hidden"  formControlName="note" [ngModel]="rating">
+                                        <fa-icon [class.rated]="rating >=1" [icon]="faStar"
+                                            (click)="setRating(1)" ></fa-icon>
+                                        <fa-icon [class.rated]="rating >=2" [icon]="faStar"
+                                            (click)="setRating(2)"></fa-icon>
+                                        <fa-icon [class.rated]="rating >=3" [icon]="faStar"
+                                            (click)="setRating(3)"></fa-icon>
+                                        <fa-icon [class.rated]="rating >=4" [icon]="faStar"
+                                            (click)="setRating(4)"></fa-icon>
+                                        <fa-icon [class.rated]="rating >=5" [icon]="faStar"
+                                            (click)="setRating(5)"></fa-icon>                                   
+                                </div>
+                                
+                                <div class="form-outline mt-4">
+                                    <label class="form-label">Votre commentaire</label>
+                                    <textarea class="form-control" rows="3"
+                                        placeholder="Notez vos remarque sur la formation"
+                                        formControlName="commentaire"></textarea>
+                                </div>
+                                <div class="px-5 p-4">
+                                    <div class="px5 py-4">
+                                        <button type="submit" class="btn btn-primary btn-lg" (click)="resetNote()">Envoyer</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

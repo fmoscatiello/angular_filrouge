@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+
+
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../Auth/auth.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-creation-compte',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+
+
+  imports: [FormsModule, ReactiveFormsModule, RouterLink],
+
   templateUrl: './creation-compte.component.html',
   styleUrl: './creation-compte.component.css'
 })
@@ -31,6 +37,5 @@ export class CreationCompteComponent {
     })
     this.registerForm.reset();
     
-  }
-  
+  }  
 }
