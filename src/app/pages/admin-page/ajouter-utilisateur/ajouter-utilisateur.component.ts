@@ -25,7 +25,7 @@ export class AjouterUtilisateurComponent {
 
   onSubmit() {
     console.log("Enregistrement", this.registerForm.value);
-    this.authService.enregistrer(this.registerForm.value).subscribe({
+    this.authService.enregistrerUtilisateur(this.registerForm.value).subscribe({
       next:(response) => {
         console.log("sign up success", response)
       }

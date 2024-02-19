@@ -4,7 +4,7 @@ a {
 }
 
 .idPage{
-    height: 100vh;
+    height: 80vh;
 }
 
 .banner {
@@ -69,6 +69,6 @@ input[type="radio"] {
 }
 
 .separation {
-    height: 100vh;
+    height: 50vh;
     margin: auto;
 }

@@ -96,6 +96,5 @@ input[type="radio"] {
 }
 
 .separation {
-    height: 100vh;
-    margin: auto;
+    height: 40vh;
 }

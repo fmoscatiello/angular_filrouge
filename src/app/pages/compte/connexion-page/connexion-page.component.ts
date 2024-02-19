@@ -22,14 +22,12 @@ export class ConnexionPageComponent {
 
 
   onSubmit() {
-    console.log(this.connexionForm.value);
     this.auth.connecter(this.connexionForm.value).subscribe({
       next: (response) => {
         localStorage.setItem("jwt", response.jwt);
         localStorage.setItem("role", response.role);
         this.auth.getUserProfile().subscribe();
         this.auth.getUserRole().subscribe();
-        console.log("sign up success", response)
         this.auth.redirectToHome();
       }
     })

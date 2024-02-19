@@ -1,5 +1,7 @@
-.details {
-    /* margin-top: 5vh; */
+.title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 1em;
 }
 
 .card-details {

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, map, tap } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, tap, throwError } from 'rxjs';
 
 
 @Injectable({
@@ -23,25 +23,49 @@ export class AuthService {
   }
 
   enregistrer(user:any):Observable<any>{
-    return this.http.post<any>(`${this.apiUrl}/auth/signup`, user)
+    return this.http.post<any>(`${this.apiUrl}/auth/signup`, user).pipe(
+      catchError(error => {
+        // Handle error and display message
+        this.showErrorMessage('Erreur lors de l\'enregistrement');
+        return throwError(error);
+      })
+    )
+  }
+
+  enregistrerUtilisateur(user:any):Observable<any>{
+    return this.http.post<any>(`${this.apiUrl}/auth/enregistrer`, user).pipe(
+      catchError(error => {
+        this.showErrorMessage('Erreur lors de l\'enregistrement');
+        return throwError(error);
+      })
+    )
   }
 
   connecter(loginRequest: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/auth/signin`, loginRequest).pipe(
-      map((response: any) => { // Use 'any' type for flexibility
+      map((response: any) => {
         localStorage.setItem('jwt', response.jwt);
-        localStorage.setItem('role', response.role); // Extract role from JSON
-        console.log('role', response.role);
-        return response; // Pass the full response through
+        localStorage.setItem('role', response.role);
+        return response;
+      }),
+      catchError(error => {
+        // Handle error and display message
+        this.showErrorMessage('Email ou mot de passe incorrect');
+        return throwError(error);
       })
     );
   }
+
+  showErrorMessage(message: string) {
+    alert(message);
+  }
+  
 
   logOut(){
     localStorage.removeItem('jwt');
     localStorage.removeItem('role');
     this.authSubject.next({user:null});
-    this.router.navigate(['/']);
+    this.router.navigate(['/identification']);
   }
 
   getUserProfile():Observable<any>{
@@ -65,10 +89,8 @@ export class AuthService {
   redirectToHome() {
     const role = localStorage.getItem('role');
     if ( role === 'ADMIN'){
-      console.log('admin');
       this.router.navigate(['/admin']);
     } else {
-      console.log('user');
       this.router.navigate(['/']);
     }
   }

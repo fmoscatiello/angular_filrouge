@@ -3,7 +3,7 @@ import { AuthService } from './../../../Auth/auth.service';
 import { Component } from '@angular/core';
 import Utilisateur from '../../../models/utilisateur.model';
 import { UtilisateurService } from '../../../services/utilisateur.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-supprimer-utilisateur',
@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 export class SupprimerUtilisateurComponent {
   selectedUsers: Utilisateur[] = [];
 
-  constructor(private utilisateurService: UtilisateurService ) {}
+  constructor(private utilisateurService: UtilisateurService, private router:Router ) {}
 
   public utilisateurs: Utilisateur[] = [];
 
@@ -41,6 +41,7 @@ export class SupprimerUtilisateurComponent {
       }
       this.selectedUsers = [];
       this.utilisateurs = this.utilisateurs.filter(u => !this.selectedUsers.map(selected => selected.id).includes(u.id));
+      window.location.reload();
     } catch (error) {
       console.error('Error deleting users:', error);
     }
